@@ -30,7 +30,8 @@ Node * DrzewoAVL::RR(Node * A)
 	A->p = B;
 	if (P)
 	{
-		if (P->left == A) P->left = B; else P->right = B;
+		if (P->left == A) P->left = B; 
+		else P->right = B;
 	}
 	else root = B;
 
@@ -58,7 +59,8 @@ Node * DrzewoAVL::LL(Node * A)
 	A->p = B;
 	if (P)
 	{
-		if (P->left == A) P->left = B; else P->right = B;
+		if (P->left == A) P->left = B; 
+		else P->right = B;
 	}
 	else root = B;
 
@@ -90,7 +92,8 @@ Node * DrzewoAVL::RL(Node * A)
 	C->p = P;
 	if (P)
 	{
-		if (P->left == A) P->left = C; else P->right = C;
+		if (P->left == A) P->left = C; 
+		else P->right = C;
 	}
 	else root = C;
 
@@ -117,7 +120,8 @@ Node * DrzewoAVL::LR(Node * A)
 	C->p = P;
 	if (P)
 	{
-		if (P->left == A) P->left = C; else P->right = C;
+		if (P->left == A) P->left = C; 
+		else P->right = C;
 	}
 	else root = C;
 
@@ -386,7 +390,7 @@ void DrzewoAVL::display(Node *g, int level)
 		cout << g->war;
 		display(g->left, level + 1);
 	}
-	else cout << "Drzewa jeszcze nie ma" << endl;
+	
 }
 
 // Przechodzi przez drzewo Preorder
