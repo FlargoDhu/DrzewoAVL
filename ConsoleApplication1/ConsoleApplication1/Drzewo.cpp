@@ -416,7 +416,7 @@ void DrzewoAVL::posto(Node * g)
 	}
 }
 
-// Przechodzi przez drzewo siejąc zawartość węzłów
+// Przechodzi przez drzewo wypisując wartosci
 
 void DrzewoAVL::sow(Node * g)
 {
