@@ -324,8 +324,6 @@ Node * DrzewoAVL::get_rid(Node * g)
 			if (!(y->bf))
 			{
 
-				
-
 				y->bf = (y->left == z) ? -1 : 1;
 				break;
 			}
@@ -333,9 +331,6 @@ Node * DrzewoAVL::get_rid(Node * g)
 			{
 				if (((y->bf == 1) && (y->left == z)) || ((y->bf == -1) && (y->right == z)))
 				{
-
-					
-
 					y->bf = 0;
 					z = y; y = y->p;
 				}
@@ -344,25 +339,16 @@ Node * DrzewoAVL::get_rid(Node * g)
 					t = (y->left == z) ? y->right : y->left;
 					if (!(t->bf))
 					{
-
-						
-
 						if (y->bf == 1) LL(y); else RR(y);
 						break;
 					}
 					else if (y->bf == t->bf)
 					{
-
-						
-
 						if (y->bf == 1) LL(y); else RR(y);
 						z = t; y = t->p;
 					}
 					else
-					{
-
-						
-
+					{	
 						if (y->bf == 1) LR(y); else RL(y);
 						z = y->p; y = z->p;
 					}

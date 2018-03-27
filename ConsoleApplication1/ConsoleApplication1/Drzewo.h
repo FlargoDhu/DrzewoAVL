@@ -7,8 +7,6 @@ struct Node
 	int war, bf;
 };
 
-
-
 class DrzewoAVL
 {
 public:
